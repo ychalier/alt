@@ -18,6 +18,7 @@ class Entry:
             if match is not None:
                 self.video_id = match.group(1)
                 break
+     
     def search(self, query):
         if query is None:
             return True
@@ -30,7 +31,7 @@ class Entry:
         attributes = [self.title, self.score, self.flair, self.video_id]
         return "\t".join(map(str, attributes)).replace("None", "")
 
-class Scrapper:
+class Scraper:
 
     subreddit_name = "Frenchaltmusic"
 
@@ -76,8 +77,8 @@ if __name__ == "__main__":
     with open("credentials.txt") as file:
         credentials = [line.strip() for line in file.readlines()]
     client_id, client_secret, user_agent = credentials[:3]
-    scrapper = Scrapper(client_id, client_secret, user_agent)
-    entries = scrapper.scrap(None)
+    scraper = Scraper(client_id, client_secret, user_agent)
+    entries = scraper.scrap(None)
     export("entries.tsv", entries)
     dj = DiscJockey()
     if len(sys.argv) == 2:
