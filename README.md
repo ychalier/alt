@@ -1,6 +1,6 @@
 # alt
 
-Scrapper for [r/Frenchaltmusic](https://reddit.com/r/Frenchaltmusic). This sub is dedicated to French underground / Avant garde music. Online demo at https://yohan.chalier.fr/alt.
+Scraper for [r/Frenchaltmusic](https://reddit.com/r/Frenchaltmusic). This sub is dedicated to French underground / Avant garde music. Online demo at https://yohan.chalier.fr/alt.
 
 ## setup
 
